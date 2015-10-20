@@ -1,9 +1,0 @@
-*.exe
-frierfox/Debug/frierfox.tlog/frierfox.lastbuildstate
-*.obj
-*.tlog
-*.log
-*.pdb
-Debug/frierfox.ilk
-*.idb
-.vs/frierfox/v14/.suo

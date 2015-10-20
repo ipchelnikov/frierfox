@@ -56,7 +56,14 @@ void command_handler()
 
         while (fgets(psBuffer, 128, pPipe))
         {
-            printf(psBuffer);
+            TRACE << "Sending buf: " << psBuffer << ENDL;
+
+            // Fixing cmd output TODO: UDTF-16?
+            for (int i = 0; i < 128; i++)
+                if (psBuffer[i] == -1)
+                    psBuffer[i] = ' ';
+
+
             // TODO Lock
             frier->send(psBuffer);
         }
