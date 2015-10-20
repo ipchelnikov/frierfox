@@ -96,8 +96,6 @@ int main(int argc, char *argv[])
 
         while (frier->listen() > 0)
         {
-            //frier->send("Recv command");
-
             command_mutex.lock();
             commands.push(string(frier->getBuf()));
             command_mutex.unlock();
